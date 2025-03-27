@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Allester Corton" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>GitHub Guide</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>GitHub Best Practices Guide</h1>
+
+    <h2>Branch Naming Conventions</h2>
+    <table>
+      <tr>
+        <th>Branch Type</th>
+        <th>Naming Convention</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>Feature</td>
+        <td>feature/&lt;name&gt;</td>
+        <td>feature/auth-ui</td>
+      </tr>
+      <tr>
+        <td>Bugfix</td>
+        <td>fix/&lt;name&gt;</td>
+        <td>fix/input-validation</td>
+      </tr>
+      <tr>
+        <td>Hotfix</td>
+        <td>hotfix/&lt;name&gt;</td>
+        <td>hotfix/payment-crash</td>
+      </tr>
+      <tr>
+        <td>Enhancement</td>
+        <td>enhancement/&lt;name&gt;</td>
+        <td>enhancement/performance-boost</td>
+      </tr>
+      <tr>
+        <td>Release</td>
+        <td>release/&lt;version&gt;</td>
+        <td>release/v1.2.0</td>
+      </tr>
+      <tr>
+        <td>Experiment</td>
+        <td>experiment/&lt;name&gt;</td>
+        <td>experiment/new-login-flow</td>
+      </tr>
+      <tr>
+        <td>Documentation</td>
+        <td>docs/&lt;name&gt;</td>
+        <td>docs/api-reference</td>
+      </tr>
+    </table>
+
+    <h2>Commit Message Structure</h2>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Emoji</th>
+        <th>Prefix</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>Feature</td>
+        <td>✨</td>
+        <td>feat:</td>
+        <td>✨ feat(auth): add password reset page</td>
+      </tr>
+      <tr>
+        <td>Bugfix</td>
+        <td>🐛</td>
+        <td>fix:</td>
+        <td>🐛 fix(ui): resolve input field validation issue</td>
+      </tr>
+      <tr>
+        <td>Refactor</td>
+        <td>♻️</td>
+        <td>refactor:</td>
+        <td>♻️ refactor(signup): optimize form state handling</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>⚡</td>
+        <td>perf:</td>
+        <td>⚡ perf(api): reduce database query time</td>
+      </tr>
+      <tr>
+        <td>Style</td>
+        <td>💄</td>
+        <td>style:</td>
+        <td>💄 style(button): improve hover effect</td>
+      </tr>
+      <tr>
+        <td>Documentation</td>
+        <td>📝</td>
+        <td>docs:</td>
+        <td>📝 docs(readme): update installation steps</td>
+      </tr>
+    </table>
+
+    <h2>Common Git Commands</h2>
+    <h3>Cloning a Repository</h3>
+    <pre>git clone &lt;repo-url&gt;</pre>
+
+    <h3>Creating a New Branch</h3>
+    <pre>git checkout -b feature/new-feature</pre>
+
+    <h3>Switching Branches</h3>
+    <pre>git checkout main</pre>
+
+    <h3>Staging and Committing Changes</h3>
+    <pre>
+git add .
+git commit -m "✨ feat(ui): add new login page"</pre
+    >
+
+    <h3>Pushing Changes</h3>
+    <pre>git push origin feature/new-feature</pre>
+
+    <h3>Fetching and Merging Updates</h3>
+    <pre>
+git fetch origin
+git merge origin/main</pre
+    >
+
+    <h3>Rebasing a Branch</h3>
+    <pre>git rebase main</pre>
+
+    <h3>Undoing the Last Commit</h3>
+    <pre>
+git reset --soft HEAD~1  # Keep changes
+git reset --hard HEAD~1  # Remove changes</pre
+    >
+
+    <h2>Releases and Tags</h2>
+    <h3>Creating a Tag for a Release</h3>
+    <pre>git tag -a v1.0.0 -m "Release version 1.0.0"</pre>
+
+    <h3>Pushing Tags to Remote</h3>
+    <pre>git push origin v1.0.0</pre>
+
+    <h3>Listing All Tags</h3>
+    <pre>git tag</pre>
+
+    <h3>Creating a GitHub Release</h3>
+    <ol>
+      <li>Go to the repository on GitHub.</li>
+      <li>Navigate to the <b>Releases</b> section.</li>
+      <li>Click <b>Draft a new release</b>.</li>
+      <li>Select the tag and add release notes.</li>
+      <li>Click <b>Publish Release</b>.</li>
+    </ol>
+
+    <h2>General Best Practices</h2>
+    <ul>
+      <li>Keep branch names short but descriptive.</li>
+      <li>Use lowercase and hyphens (-) for branch names.</li>
+      <li>Follow conventional commits format for commit messages.</li>
+      <li>
+        Use imperative mood (e.g., "Add login button" instead of "Added login
+        button").
+      </li>
+      <li>Always fetch and merge before pushing changes.</li>
+      <li>Use feature branches for new development.</li>
+      <li>Tag releases properly and document major changes.</li>
+    </ul>
+  </body>
+</html>
